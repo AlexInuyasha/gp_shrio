@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.108.75.36:3306/gp?serverTimezone=UTC
+    type: com.alibaba.druid.pool.DruidDataSource
+    password: 123456
+    username: root
+
+## mybatis的package别名
+mybatis:
+  type-aliases-package: com.hzy.gpmybatisdemo1.pojo
+# 指定MyBatis的映射文件的路径
+  mapper-locations: classpath:mapper/*.xml
