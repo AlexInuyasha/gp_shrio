@@ -26,33 +26,9 @@ public class UserController {
         return "user";
     }
 
-    @RequestMapping("/user/save")
-    public String addUser(User user){
-        service.addUser(user);
-        return "redirect:/user/query";
-    }
-
     @RequestMapping("/{page}")
     public String page(String page){
         return page;
     }
 
-    @RequestMapping("/user/updateInfo")
-    public String updateInfo(Integer id,Model model){
-        User user = service.queryById(id);
-        model.addAttribute("user",user);
-        return "updateUser";
-    }
-
-    @RequestMapping("/user/update")
-    public String updateUser(User user){
-        service.updateUser(user);
-        return "redirect:/user/query";
-    }
-
-    @RequestMapping("/user/deleteUser")
-    public String deleteUser(Integer id){
-        service.deleteUserById(id);
-        return "redirect:/user/query";
-    }
 }

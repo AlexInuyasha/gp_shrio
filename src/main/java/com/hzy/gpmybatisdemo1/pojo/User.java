@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 /**
  * @ClassName User
  * @Aauthor zhengyang.hu
@@ -15,7 +17,14 @@ import lombok.NoArgsConstructor;
 public class User {
     private Integer id;
 
-    private String name;
+    private String username;
+    private String password;
+    private String salt;
+    private Date creatTime;
+    private Integer state;
+    private Date lastLoginTime;
+    private String nickname;
+    private String realname;
 
     private Integer age;
 }

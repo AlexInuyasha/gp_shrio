@@ -25,29 +25,5 @@ public class UserServiceImpl implements UserService{
         return userList;
     }
 
-    @Override
-    public Integer addUser(User user) {
-        Integer integer = userMapper.addUser(user);
-        return integer;
-    }
-
-    @Override
-    public User queryById(Integer id) {
-        User user = userMapper.queryById(id);
-        return user;
-    }
-
-    @Override
-    public Integer updateUser(User user) {
-        Integer integer = userMapper.updateUser(user);
-        return integer;
-    }
-
-    @Override
-    public Integer deleteUserById(Integer id) {
-        Integer integer = userMapper.deleteUserById(id);
-        return integer;
-    }
-
 
 }
